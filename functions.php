@@ -183,3 +183,29 @@ require_once ASTRA_THEME_DIR . 'inc/core/markup/class-astra-markup.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-filters.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-hooks.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
+
+//Runway Scripts
+function natures_runway_scripts() {
+	wp_enqueue_style( 'splide-css', get_template_directory_uri().'/assets/libs/splide/dist/css/splide.min.css' , array(), 1.0 );
+	wp_style_add_data( 'splide-css', 'rtl', 'replace' );
+
+	wp_enqueue_style( 'splide-core', get_template_directory_uri().'/assets/libs/splide/dist/css/splide-core.min.css' , array(), 1.0 );
+	wp_style_add_data( 'splide-core', 'rtl', 'replace' );
+
+	wp_enqueue_style( 'splide-default', get_template_directory_uri().'/assets/libs/splide/dist/css/themes/splide-default.min.css' , array(), 1.0 );
+	wp_style_add_data( 'splide-default', 'rtl', 'replace' );
+
+	wp_enqueue_script( 'Query.min', get_template_directory_uri() . '/assets/libs/jquery.min.js', array(), 1.0, true );
+	
+	wp_enqueue_script( 'GSAP.min', get_template_directory_uri() . '/assets/libs/gsap/gsap.min.js', array(), 1.0, true );
+	
+	wp_enqueue_script( 'splide-js', get_template_directory_uri() . '/assets/libs/splide/dist/js/splide.min.js', array(), 1.0, true );
+
+	wp_enqueue_style( 'runway-style', get_template_directory_uri().'/assets/css/runway.css' , array(), 1.0 );
+	wp_style_add_data( 'runway-style', 'rtl', 'replace' );
+
+	wp_enqueue_script( 'runway', get_template_directory_uri() . '/assets/js/runway.js', array(), 1.0, true );
+
+}
+
+add_action( 'wp_enqueue_scripts', 'natures_runway_scripts' );
