@@ -113,6 +113,11 @@ if ( post_password_required() ) {
 	<div class="product-area-cont">
 		<div class="product-area-one-cont">
 			<div class="mobile-carousel">
+			<div class="mobile-carousel-back-button-cont">
+				<div class="mobile-carousel-back-button">
+					<p>x</p>
+				</div>
+			</div>
 			<section class="splide">
 				<div class="splide__track">
 					<ul class="splide__list">

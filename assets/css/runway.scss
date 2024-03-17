@@ -132,6 +132,26 @@ button{
             }
             @media(min-width:1439px){
             }
+            .mobile-carousel-back-button-cont{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                z-index: 2;
+                .mobile-carousel-back-button{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    width: 1cm;
+                    height: 1cm;
+                    border-radius: 100cm;
+                    background: rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(5px);
+                    p{
+                        margin: auto;
+                        text-align: center;
+                    }
+                }
+            }
 
             
             .splide{
