@@ -188,8 +188,31 @@ if ( post_password_required() ) {
 					<h1 class="info-component-product-name-text"><?php echo the_title(); ?></h1>
 				</div>
 				<div class="product-area-info-component info-component-product-price">
-					<p class="info-component-product-price-regular regular-price"></p>
-					<p class="info-component-product-price-sale sale-price"></p>
+					<p class="info-component-product-price-regular regular-price">
+					<?php
+							if ( $product->is_type('variable') ) {}
+							else{
+								if($product->get_sale_price() !== ''){
+									echo get_woocommerce_currency_symbol().' '.$product->get_regular_price();
+								}
+								else{
+								}
+							}
+						?>
+					</p>
+					<p class="info-component-product-price-sale sale-price">
+						<?php
+							if ( $product->is_type('variable') ) {}
+							else{
+								if($product->get_sale_price() !== ''){
+									echo get_woocommerce_currency_symbol().' '.$product->get_sale_price();
+								}
+								else{
+									echo get_woocommerce_currency_symbol().' '.$product->get_regular_price();
+								}
+							}
+						?>
+					</p>
 				</div>
 				<div class="product-area-info-component info-component-product-description">
 					<p><?php echo $product->get_description(); ?></p>
