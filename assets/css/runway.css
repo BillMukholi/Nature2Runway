@@ -417,6 +417,18 @@ button {
 .product-area-cont .product-area-two-cont .product-area-info-cont .info-component-product-form .product-totals-html {
   display: none;
 }
+.product-area-cont .product-area-two-cont .product-area-info-cont .info-component-product-form .cart {
+  background: green;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.product-area-cont .product-area-two-cont .product-area-info-cont .info-component-product-form .cart .quantity {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: purple;
+}
 .product-area-cont .product-area-two-cont .product-area-info-cont .info-component-product-form form table tbody tr {
   display: flex;
   flex-direction: column;

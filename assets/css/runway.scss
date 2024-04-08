@@ -424,6 +424,20 @@ button{
                 .product-totals-html{
                     display: none;
                 }
+
+                .cart{
+                    background: green;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    .quantity{
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        background: purple;
+                    }
+                }
+
                 form{
                     table{
                         tbody{
